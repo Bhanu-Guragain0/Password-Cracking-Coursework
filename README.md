@@ -46,8 +46,13 @@ The program compares the provided hash with entries in the dictionary file, indi
 
 ## Recommendation and Future Enhancement
 
--Recommendation-----Consider incorporating a graphical user interface (GUI) for broader accessibility.
--Future Enhancement--------Explore advanced hashing algorithms (e.g., AES, SHA) and additional attack methods. Extend support for various file types and incorporate functions for website security testing.
+Recommendation
+
+Consider incorporating a graphical user interface (GUI) for broader accessibility.
+
+Future Enhancement
+
+Explore advanced hashing algorithms (e.g., AES, SHA) and additional attack methods. Extend support for various file types and incorporate functions for website security testing.
 
 ## Ethical Use
 
