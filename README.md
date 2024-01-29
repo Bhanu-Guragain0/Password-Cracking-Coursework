@@ -35,6 +35,7 @@ Run the compiled program with the path to the dictionary file as a command-line 
 ### Example
 
 ./myproject /home/user/passwords.txt
+
 Is the dictionary file hashed or plain text? (Enter 1 for hashed, 0 for plain text): 1
 Enter the hashed MD5 sum: abcdef123456...
 
