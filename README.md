@@ -1,10 +1,13 @@
-# Password-Cracking-Coursework in c
+
+   
+
+# Password Cracking Coursework
 
 ## Introduction
 
 This C program is designed to explore password vulnerabilities, emphasizing the importance of strong password practices in cybersecurity. It employs a combination of MD5 hashing and brute force techniques to analyze common password weaknesses.
 
-## System Requirements
+# System Requirements
 
 - Operating System: Unix/Linux
 - Compiler: GCC (GNU Compiler Collection)
@@ -12,48 +15,98 @@ This C program is designed to explore password vulnerabilities, emphasizing the 
 
 sudo apt-get install libssl-dev
 
+# Usage
 
-## Compilation
+To use the program, follow these steps:
 
-Compile the code using the following command:
+# Clone the repository:
+   
+   git clone https://github.com/Bhanu-Guragain0/Password-Cracking-Coursework.git
+   
 
+# Navigate to the cloned directory:
+   
+   cd Password-Cracking-Coursework
+   
 
-gcc myproject.c -o myproject -lssl -lcrypto
+# Compile the C program:
+   
+   gcc myproject.c -o myproject -lssl -lcrypto
+   
 
+# Run the program with the following command:
+   
+   ./myproject /path/to/dictionary/file
+   
 
-## Usage
+   Replace `<user_input>` with the input for which you want to find a match.
 
-Run the compiled program with the path to the dictionary file as a command-line argument. Optionally, specify whether the dictionary file contains hashed or plaintext entries.
+# Functionality
+
+- The program prompts the user to specify whether the dictionary file is hashed or plaintext.
+- If the dictionary file is hashed, the user needs to provide the hashed MD5 sum.
+- If the dictionary file is plaintext, the program generates the MD5 hash for the user input and compares it with the entries in the dictionary using a predefined key range for MD5 hashing.
+- Once a match is found, the program displays the corresponding entry or username along with the key (if applicable).
+
+# Note
+
+- The dictionary file location is currently hardcoded in the program (`/home/bhanu/Downloads/password.txt`). You may need to modify this path according to your system setup.
+- Ensure you have OpenSSL installed on your system to compile the program (`-lcrypto` flag).
+
+# Example
 
 ./myproject /path/to/dictionary/file
 
-### User Interaction
 
-1. When prompted, enter '1' for hashed entries or '0' for plaintext entries.
-2. If hashed, enter the hashed MD5 sum.
+This command will attempt to find a match for the provided password (`my_password`) in the dictionary file.
+
+## Author
+
+This coursework is authored by Bhanu Guragain.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.Navigate to the cloned directory:
+   
+   cd Password-Cracking-Coursework
+   
+
+3. Compile the C program:
+   ```bash
+   gcc -o password_cracker password_cracker.c -lcrypto
+   ```
+
+4. Run the program with the following command:
+   ```bash
+   ./password_cracker <user_input>
+   ```
+
+   Replace `<user_input>` with the input for which you want to find a match.
+
+### Functionality
+
+- The program prompts the user to specify whether the dictionary file is hashed or plaintext.
+- If the dictionary file is hashed, the user needs to provide the hashed MD5 sum.
+- If the dictionary file is plaintext, the program generates the MD5 hash for the user input and compares it with the entries in the dictionary using a predefined key range for MD5 hashing.
+- Once a match is found, the program displays the corresponding entry or username along with the key (if applicable).
+
+### Note
+
+- The dictionary file location is currently hardcoded in the program (`/home/bhanu/Downloads/password.txt`). You may need to modify this path according to your system setup.
+- Ensure you have OpenSSL installed on your system to compile the program (`-lcrypto` flag).
 
 ### Example
 
-./myproject /home/user/passwords.txt
+```bash
+./password_cracker my_password
+```
 
-Is the dictionary file hashed or plain text? (Enter 1 for hashed, 0 for plain text): 1
-Enter the hashed MD5 sum: abcdef123456...
+This command will attempt to find a match for the provided password (`my_password`) in the dictionary file.
 
+### Author
 
-## Output
+This coursework is authored by Bhanu Guragain.
 
-The program compares the provided hash with entries in the dictionary file, indicating if a match is found.
+### License
 
-## Recommendation and Future Enhancement
-
-Recommendation
-
-Consider incorporating a graphical user interface (GUI) for broader accessibility.
-
-Future Enhancement
-
-Explore advanced hashing algorithms (e.g., AES, SHA) and additional attack methods. Extend support for various file types and incorporate functions for website security testing.
-
-## Ethical Use
-
-Please use this program responsibly and for educational purposes only. Unauthorized or malicious use is strictly prohibited.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
