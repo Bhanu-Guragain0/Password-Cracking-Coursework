@@ -39,7 +39,7 @@ To use the program, follow these steps:
    ./myproject /path/to/dictionary/file
    
 
-   Replace `<user_input>` with the input for which you want to find a match.
+   Replace '/path/to/dictionary/file' with the input for which you want to find a match.
 
 # Functionality
 
